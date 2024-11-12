@@ -1,0 +1,254 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ProseMirror container */
+.ProseMirror {
+    min-height: 200px;
+    caret-color: #3b82f6;
+}
+
+/* Headings Styling */
+.ProseMirror h1 {
+    font-size: 2.25rem; /* Equivalent to 36px */
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.ProseMirror h2 {
+    font-size: 1.875rem; /* Equivalent to 30px */
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.ProseMirror h3 {
+    font-size: 1.5rem; /* Equivalent to 24px */
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.ProseMirror h4 {
+    font-size: 1.25rem; /* Equivalent to 20px */
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.ProseMirror h5 {
+    font-size: 1.125rem; /* Equivalent to 18px */
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.ProseMirror h6 {
+    font-size: 1rem; /* Equivalent to 16px */
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: #6b7280; /* Light gray color */
+}
+
+/* Paragraph Styling */
+.ProseMirror p {
+    font-size: 1rem; /* Equivalent to 16px */
+    line-height: 1.5;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #333; /* Dark gray color */
+}
+
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+  
+  .dropdown-item {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #333;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+/* Placeholder */
+
+.ProseMirror p.is-editor-empty:first-child::before {
+    color: #adb5bd;
+    content: 'Type Text Here';
+    float: left;
+    height: 0;
+    pointer-events: none;
+}
+
+/* Styling for blockquotes */
+.ProseMirror blockquote {
+    border-left: 4px solid #3b82f6; /* Blue left border */
+    padding-left: 1rem; /* Indent text from border */
+    margin: 1rem 0; /* Vertical spacing */
+    color: #555; /* Text color */
+    font-style: italic; /* Italicized text */
+    background-color: #f0f4f8; /* Light background color */
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* Styling for code blocks */
+.ProseMirror pre {
+    background-color: #2d2d2d; /* Dark background color */
+    color: #f8f8f2; /* Light text color */
+    padding: 1rem; /* Padding around the code */
+    border-radius: 5px; /* Rounded corners */
+    overflow-x: auto; /* Enable horizontal scroll for long code */
+    margin: 1rem 0; /* Vertical spacing */
+    font-family: 'Courier New', Courier, monospace; /* Monospaced font */
+    font-size: 0.95rem; /* Font size for readability */
+}
+
+/* Inline code styling */
+.ProseMirror code {
+    background-color: #f5f5f5; /* Light background color */
+    color: #d6336c; /* Slightly darker color */
+    padding: 0.2rem 0.4rem; /* Padding around inline code */
+    border-radius: 3px; /* Rounded corners */
+    font-family: 'Courier New', Courier, monospace; /* Monospaced font */
+    font-size: 0.9rem; /* Slightly smaller font size for inline code */
+}
+
+/* Styling for bullet list */
+.ProseMirror ul {
+    list-style-type: disc;
+    padding-left: 1.5rem; /* Adjust to control indentation */
+}
+
+.ProseMirror ul li {
+    color: black; /* Black color for list items */
+}
+
+/* Ordered List Styling */
+.ProseMirror ol {
+    list-style-type: decimal; /* Numbers for ordered lists */
+    padding-left: 1.5rem; /* Indent list from the left */
+    color: #333; /* Text color */
+    margin: 1rem 0; /* Vertical spacing */
+}
+
+.ProseMirror ol li {
+    margin-bottom: 0.5rem; /* Spacing between list items */
+    line-height: 1.6; /* Line height for readability */
+}
+
+.ProseMirror ol li::marker {
+    font-weight: bold; /* Bold marker for numbers */
+    color: #333; /* Customize number color */
+    font-size: 1.1em; /* Slightly larger number font size */
+}
+
+/* Toolbar Button Styling */
+button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background-color: #f3f3f3;
+    color: #555;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  button:disabled {
+    background-color: #ddd;
+    color: #999;
+    cursor: not-allowed;
+  }
+  
+  button.active {
+    background-color: #0056b3;
+    color: #fff;
+  }
+
+  /* Editor Content */
+.prose {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fafafa;
+    color: #333;
+    min-height: 300px;
+    outline: none;
+  }
+  
+  /* Editor Content Focus State */
+  .prose:focus-within {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+  }
+  
+
+
+  /* Style for links in Tiptap Editor */
+.prose a {
+    color: #0073e6; /* Change to your preferred link color */
+    text-decoration: underline;
+    font-weight: 500; /* Semi-bold for emphasis */
+    transition: color 0.3s ease;
+}
+
+.prose a:hover {
+    color: #005bb5; /* Darker color on hover */
+    text-decoration: none;
+}
+
+/* Optional: Style for visited links */
+.prose a:visited {
+    color: #4b0082; /* Different color for visited links */
+}
+
+/* Optional: Style for links with underline animations */
+.prose a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #0073e6;
+    transition: width 0.3s;
+}
+
+.prose a:hover::after {
+    width: 100%;
+}
+
+/* Cursor blink effect */
+@keyframes blink-caret {
+    from, to { caret-color: #3b82f6; }
+    50% { caret-color: transparent; }
+}
+
+.ProseMirror-focused {
+    caret-animation: blink-caret 1s step-end infinite;
+}
