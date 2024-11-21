@@ -25,7 +25,7 @@ const AdminLogin = () => {
         setError('');
 
         try {
-            const { data } = await axios.post('http://localhost:3001/login', credentials);
+            const { data } = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/login`, credentials);
             
             if (data.message === "Success") {
                 localStorage.setItem('token', data.token);

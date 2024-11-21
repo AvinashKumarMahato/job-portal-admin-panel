@@ -8,7 +8,7 @@ const Messages = () => {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/messages");
+        const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/messages`);
         setMessages(response.data);
       } catch (error) {
         console.error("Error fetching messages:", error);

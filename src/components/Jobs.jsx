@@ -22,7 +22,7 @@ const Jobs = () => {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const response = await axios.get('http://localhost:3001/getPosts');
+                const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/getPosts`);
                 setPosts(response.data);
             } catch (err) {
                 console.error('Error fetching posts:', err);
@@ -42,7 +42,7 @@ const Jobs = () => {
         if (!postToDelete) return;
     
         try {
-          await axios.delete(`http://localhost:3001/deleteJobPost/${postToDelete}`);
+          await axios.delete(`${import.meta.env.VITE_API_BASE_URL}/deleteJobPost/${postToDelete}`);
           setPosts((prevPosts) => prevPosts.filter((post) => post._id !== postToDelete));
           closeDeleteModal();
         } catch (error) {

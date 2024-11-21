@@ -35,7 +35,7 @@ const Blogs = () => {
     const fetchPosts = async () => {
       try {
         setError(null);
-        const response = await axios.get('http://localhost:3001/getBlogPosts');
+        const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/getBlogPosts`);
 
         // Sort posts by date (newest first)
         const sortedPosts = response.data.sort(
@@ -66,7 +66,7 @@ const Blogs = () => {
     if (!postToDelete) return;
 
     try {
-      await axios.delete(`http://localhost:3001/deletePost/${postToDelete}`);
+      await axios.delete(`${import.meta.env.VITE_API_BASE_URL}/deletePost/${postToDelete}`);
       setPosts((prevPosts) => prevPosts.filter((post) => post._id !== postToDelete));
       closeDeleteModal();
     } catch (error) {

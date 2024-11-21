@@ -37,7 +37,7 @@ const EditBlogPost = () => {
     };
 
     try {
-      await axios.put(`http://localhost:3001/blogPosts/${id}`, updatedData);
+      await axios.put(`${import.meta.env.VITE_API_BASE_URL}/blogPosts/${id}`, updatedData);
       console.log('Update Successful:', updatedData);  // Debugging log
       setSuccessMessageVisible(true);
       setErrorMessageVisible(false);

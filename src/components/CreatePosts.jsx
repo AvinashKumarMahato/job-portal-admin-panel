@@ -35,7 +35,7 @@ const CreatePosts = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:3001/api/posts', postData);
+      await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/posts`, postData);
       setModalMessage("Post Published Successfully!");
       setModalButtons([
         { text: "View Posts", action: () => navigate('/dashboard/all-posts') },
@@ -54,7 +54,7 @@ const CreatePosts = () => {
   const handleSaveDraft = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:3001/api/drafts', postData);
+      await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/drafts`, postData);
       setModalMessage("Draft Saved Successfully!");
       setModalButtons([
         { text: "View Draft", action: () => navigate('/dashboard/drafts') },

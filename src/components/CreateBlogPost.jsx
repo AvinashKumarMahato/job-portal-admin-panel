@@ -27,7 +27,7 @@ const CreateBlogPost = () => {
     };
 
     try {
-      const response = await axios.post('http://localhost:3001/blogPosts', postData);
+      const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/blogPosts`, postData);
       console.log('Post created:', response.data);
       setModalMessage('Post Published Successfully!');
       setModalButtons([
@@ -70,7 +70,7 @@ const CreateBlogPost = () => {
     };
 
     try {
-      await axios.post('http://localhost:3001/draftBlogPost', postData);
+      await axios.post(`${import.meta.env.VITE_API_BASE_URL}/draftBlogPost`, postData);
       setModalMessage('Draft Saved Successfully!');
       setModalButtons([
         {

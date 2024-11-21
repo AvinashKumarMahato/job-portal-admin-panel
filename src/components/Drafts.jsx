@@ -22,7 +22,7 @@ const closeDeleteModal = () => {
   // Fetch the posts
   useEffect(() => {
     axios
-      .get('http://localhost:3001/getDrafts')
+      .get(`${import.meta.env.VITE_API_BASE_URL}/getDrafts`)
       .then((response) => setDrafts(response.data))
       .catch((err) => console.log(err));
   }, []);
@@ -31,7 +31,7 @@ const closeDeleteModal = () => {
     if (!postToDelete) return;
 
     try {
-      await axios.delete(`http://localhost:3001/deleteDraftJob/${postToDelete}`);
+      await axios.delete(`${import.meta.env.VITE_API_BASE_URL}/deleteDraftJob/${postToDelete}`);
       setDrafts((prevPosts) => prevPosts.filter((post) => post._id !== postToDelete));
       closeDeleteModal();
     } catch (error) {

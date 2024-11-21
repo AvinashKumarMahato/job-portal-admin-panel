@@ -22,7 +22,7 @@ const EditPost = () => {
   useEffect(() => {
     const fetchPostData = async () => {
       try {
-        const { data } = await axios.get(`http://localhost:3001/update/${postId}`);
+        const { data } = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/update/${postId}`);
         setValues((prevValues) => ({
           ...prevValues,
           jobTitle: data.jobTitle,
@@ -72,7 +72,7 @@ const EditPost = () => {
     };
 
     try {
-      await axios.put(`http://localhost:3001/update/${postId}`, updatedValues);
+      await axios.put(`${import.meta.env.VITE_API_BASE_URL}/update/${postId}`, updatedValues);
       navigate('/dashboard/all-posts');
     } catch (error) {
       console.error('Error updating post:', error);
