@@ -7,7 +7,9 @@ The **Admin Panel** is designed for managing job and blog posts and handling use
 
 ## Live Preview
 You can access the live version of the admin panel here:  
-**Admin Panel Live Preview**:[https://job-portal-admin-panel-omega.vercel.app/](https://job-portal-admin-panel-omega.vercel.app/)
+**Admin Panel Live Preview**:[Live Preview](https://job-portal-admin-panel-omega.vercel.app/)
+**User Panel**: [Live Preview](https://winsum-planet-user-panel.vercel.app/)
+
 
 ---
 
