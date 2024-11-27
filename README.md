@@ -17,7 +17,7 @@ You can access the live versions of the admin panel and user panel here:
 
 ### Prerequisites
 - **Node.js** (v16 or later)
-- **npm** or **yarn**
+- **npm**
 - Code editor (e.g., Visual Studio Code)
 
 ### Steps
@@ -25,7 +25,7 @@ You can access the live versions of the admin panel and user panel here:
 1. **Clone the Repository**
    ```bash
    git clone https://github.com/AvinashKumarMahato/job-portal-admin-panel.git
-   cd <repository-folder>
+   cd job-portal-admin-panel
    ```
 
 2. **Install Dependencies**
