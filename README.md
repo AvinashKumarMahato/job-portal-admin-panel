@@ -24,7 +24,7 @@ You can access the live versions of the admin panel and user panel here:
 
 1. **Clone the Repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/AvinashKumarMahato/job-portal-admin-panel.git
    cd <repository-folder>
    ```
 
@@ -33,15 +33,13 @@ You can access the live versions of the admin panel and user panel here:
    ```bash
    npm install
    ```
-   Or, if using yarn:
-   ```bash
-   yarn install
-   ```
 
 3. **Set Up Environment Variables**
    Create a `.env` file in the root directory and add necessary environment variables (e.g., API keys, backend URL). Example:
    ```env
-   REACT_APP_API_URL=<your-backend-api-url>
+   - VITE_API_BASE_URL=<your-backend-api-url>
+   - VITE_VIEW_WEBSITE_LINK=<frontend-url>
+   
    ```
 
 4. **Start the Development Server**
@@ -49,20 +47,12 @@ You can access the live versions of the admin panel and user panel here:
    ```bash
    npm start
    ```
-   Or, if using yarn:
-   ```bash
-   yarn start
-   ```
    The application will be available at `http://localhost:3000`.
 
 5. **Build for Production**
    To create an optimized build for production:
    ```bash
    npm run build
-   ```
-   Or, if using yarn:
-   ```bash
-   yarn build
    ```
    The build files will be located in the `build` directory.
 
